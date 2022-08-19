@@ -2,9 +2,10 @@
     <div class="banner-container">
         <h1>Welcome to Triblo's National Provider Identifier Search</h1>
         <p>Enter NPI here to find more information</p>
-        <form>
-            <input class="form-control" type="text" placeholder="Default input">
-        </form>
+        <%= simple_form_for(@provider) do |f| %>
+          <%= f.input :npi %>
+          <%= f.submit %>
+        <% end %>
     </div>
 </div>
 <div class="text-center border-bottom">
@@ -17,18 +18,28 @@
     <th scope="col">NPI</th>
     <th scope="col">Name</th>
     <th scope="col">Address</th>
+    <th scope="col">City</th
+    <th scope="col">State</th
+    <th scope="col">Zip</th
     <th scope="col">Type</th>
-    <th scope="col">Taxonomy</th>
+    <th scope="col">Taxonomy Code</th>
+    <th scope="col">Taxonomy License</th>
   </tr>
 </thead>
 <tbody>
-  <tr>
-    <th scope="row">1234567890</th>
-    <td>Thomas Pechin III</td>
-    <td>1003 E Main St</td>
-    <td>Foo</td>
-    <td>Bar</td>
-  </tr>
+  <% @providers.each do |provider| %>
+    <tr>
+      <th scope="row"><%= provider.number %></th>
+      <td><%= provider.name %></td>
+      <td><%= provider.address %></td>
+      <td><%= provider.city %></td>
+      <td><%= provider.state %></td>
+      <td><%= provider.zip %></td>
+      <td><%= provider.type %></td>
+      <td><%= provider.taxonomy_code %></td>
+      <td><%= provider.taxonomy_license %></td>
+    </tr>
+  <% end %>
 </tbody>
 </table>
 </div>
