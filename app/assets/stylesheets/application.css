@@ -1,0 +1,57 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
+
+/* Fontawesome */
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+@import url("components/buttons.css");
+@import url("components/banners.css");
+@import url("components/footer.css");
+@import url("components/avatars.css");
+
+
+:root {
+  --main-pink: rgb(215, 75, 133);
+  --main-blue: rgb(21, 32, 94);
+  --main-red: rgb(135, 19, 23);
+  --main-brown: rgb(110, 88, 18);
+  --main-gray: rgb(105, 129, 142);
+  --main-white: rgb(252, 249, 237);
+  --light-pink: rgb(252, 217, 230);
+}
+/* Utilities */
+body {
+  margin: 0;
+  font-family: Open Sans;
+}
+
+h1, h2, h3, h4 {
+  font-family: Poppins;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.text-center h3 {
+  text-align: center;
+}
