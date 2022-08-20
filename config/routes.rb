@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'provider/index'
-  root 'provider#index'
+  # get 'providers/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  resources :providers
 end

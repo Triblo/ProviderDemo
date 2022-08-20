@@ -9,16 +9,11 @@
     opacity: 0.6;
   }
   
-  .footer:hover {
-    opacity: 0.9;
-  }
-  
   .footer:click {
     opacity: 0.9;
   }
   .list-inline {
     list-style: none;
-    padding-left: 0px;
   }
   
   .list-inline {
