@@ -11,16 +11,19 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_08_19_234811) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "providers", force: :cascade do |t|
     t.integer "npi"
-    t.string "name"
-    t.string "address"
-    t.string "city"
-    t.string "state"
-    t.string "zip"
-    t.string "code"
-    t.string "license"
-    t.string "type"
+    t.text "name"
+    t.text "address"
+    t.text "city"
+    t.text "state"
+    t.text "zip"
+    t.text "code"
+    t.text "license"
+    t.text "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
